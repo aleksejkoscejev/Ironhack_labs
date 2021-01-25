@@ -53,4 +53,4 @@ select film.title, count(film.film_id) as Yes
 from film
 inner join inventory on film.film_id=inventory.film_id
 inner join store on inventory.store_id=store.store_id
-where film.title = 'Academy Dinosaur'; 
+where film.title = 'Academy Dinosaur' and store.store_id=1;
