@@ -24,10 +24,10 @@ where fi1.title='Alone Trip';
 #subquery
 select ac1.first_name, ac1.last_name
 from actor ac1
-where actor_id = 
+where actor_id in 
 (select actor_id
 from film_actor
-where actor_id = 
+where film_id in 
 (select film_id
 from film
 where title='Alone Trip')group by actor_id);
